@@ -1,0 +1,17 @@
+.emoji {
+    font-size: 50px;
+    display: inline-block;
+    animation: waveEmoji 1.5s infinite ease-in-out;
+}
+
+@keyframes waveEmoji {
+    0% {
+        transform: rotate(-5deg); 
+    }
+    50% {
+        transform: rotate(30deg); 
+    }
+    100% {
+        transform: rotate(-5deg); 
+    }
+}

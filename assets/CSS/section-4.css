@@ -1,0 +1,205 @@
+.Skills {
+    background: linear-gradient(rgba(234, 234, 237, 0.8), rgba(234, 234, 237, 0.877)), url("../image/texture-2.jpg");
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+
+.Skills-container {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.LeftRight-container {
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-logos {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-logos h1 {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.grid-logos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 3 kolom */
+    gap: 20px; /* Jarak antar item */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.logo-skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.logo-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #F0F0F2;
+    box-shadow: 10px 18px 35px rgba(88,88,88,.23);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.logo-circle img {
+    width: 30px; /* Menyesuaikan ukuran gambar dalam lingkaran */
+    height: 30px;
+}
+
+.logo-skills h1 {
+    font-size: 14px;
+    color: #333;
+}
+
+
+/* Right Projects */
+.right-project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 60%; /* Pastikan lebar kontainer mencapai 100% */
+}
+
+.right-project h1 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Grid container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid with dynamic columns */
+    gap: 20px;
+    justify-items: center;
+    width: 100%; /* Pastikan grid kontainer mencapai 100% */
+    max-width: 1200px; /* Batas maksimal lebar grid agar tetap terlihat bagus */
+    margin: 0 auto; /* Rata tengah grid di halaman */
+}
+
+/* Grid item */
+.item {
+    position: relative;
+    width: 100%;
+    max-width: 350px; /* Lebar maksimum setiap item */
+    height: 320px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    box-shadow: 10px 18px 35px rgba(88,88,88,.23);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Gambar projek */
+.item:nth-child(1) {
+    background-image: url("../image/project-1.png");
+}
+
+.item:nth-child(2) {
+    background-image: url("../image/project-2.png");
+}
+
+.item:nth-child(3) {
+    background-image: url("../image/project-3.png");
+}
+
+.item:nth-child(4) {
+    background-image: url("../image/project-4.png");
+}
+
+.item:nth-child(5) {
+    background-image: url("../image/project-5.png");
+}
+
+/* Hover effect */
+.item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Overlay saat hover */
+.item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    padding: 10px;
+}
+
+.item:hover .overlay {
+    opacity: 1; /* Menampilkan overlay saat hover */
+}
+
+/* Teks dalam overlay */
+.item .overlay .name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.item .overlay .des {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.item .overlay button {
+    padding: 10px 20px;
+    background: #FFCC00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.item .overlay button:hover {
+    background: #d9c77f;
+}
+
+@media (max-width: 1024px) {
+    .LeftRight-container {
+        flex-direction: column;
+        gap: 80px;
+    }
+
+    .left-logos, .right-project {
+        width: 100%; /* Menyesuaikan lebar agar penuh pada layar kecil */
+    }
+}
