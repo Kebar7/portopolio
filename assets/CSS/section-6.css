@@ -1,0 +1,108 @@
+
+/* CANVA SECTION */
+.Canva {
+    width: 100%;
+    padding: 100px 8%;
+    background: #f8f9fc;
+}
+
+.Canva-container {
+    max-width: 1250px;
+    margin: auto;
+}
+
+.Canva h1 {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.canva-description {
+    text-align: center;
+    color: #777;
+    font-size: 16px;
+    margin-bottom: 55px;
+}
+
+/* GRID */
+.canva-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px;
+}
+
+/* CARD */
+.canva-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+    transition: 0.35s ease;
+}
+
+.canva-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.13);
+}
+
+/* IMAGE */
+.canva-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #eee;
+}
+
+.canva-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.canva-card:hover .canva-image img {
+    transform: scale(1.04);
+}
+
+/* INFO */
+.canva-info {
+    padding: 20px 23px;
+}
+
+.canva-info h2 {
+    font-size: 19px;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+.canva-info p {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.6;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+    .canva-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .Canva {
+        padding: 70px 5%;
+    }
+
+    .Canva h1 {
+        font-size: 32px;
+    }
+
+    .canva-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
